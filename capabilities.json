@@ -1,0 +1,468 @@
+{
+    "dataRoles": [
+        {
+            "displayName": "Indicator",
+            "name": "actual",
+            "kind": "Measure"
+        },
+        {
+            "displayName": "Comparison 1",
+            "name": "target1",
+            "kind": "Measure"
+        },
+        {
+            "displayName": "Comparison 2",
+            "name": "target2",
+            "kind": "Measure"
+        }
+    ],
+    "objects": {
+        "kpiName": {
+            "displayName": "KPI Name",
+            "properties": {
+                "name": {
+                    "displayName": "Name",
+                    "type": {
+                        "text": true
+                    }
+                },
+                "color": {
+                    "displayName": "Color",
+                    "type": {
+                        "fill": {
+                            "solid": {
+                                "color": true
+                            }
+                        }
+                    }
+                },
+                "fontSize": {
+                    "displayName": "Font size",
+                    "type": {
+                        "formatting": {
+                            "fontSize": true
+                        }
+                    }
+                }
+            }
+        },
+        "actual": {
+            "displayName": "Indicator",
+            "properties": {
+                "actualColor": {
+                    "displayName": "Color",
+                    "type": {
+                        "fill": {
+                            "solid": {
+                                "color": true
+                            }
+                        }
+                    }
+                },
+                "fontSize": {
+                    "displayName": "Font size",
+                    "type": {
+                        "formatting": {
+                            "fontSize": true
+                        }
+                    }
+                },
+                "actualdisplayUnits": {
+                    "displayName": "Display Units",
+                    "type": {
+                        "enumeration": [
+                            {
+                                "value": "none",
+                                "displayName": "None"
+                            },
+                            {
+                                "value": "thousands",
+                                "displayName": "Thousands"
+                            },
+                            {
+                                "value": "millions",
+                                "displayName": "Millions"
+                            },
+                            {
+                                "value": "billions",
+                                "displayName": "Billions"
+                            },
+                            {
+                                "value": "trillions",
+                                "displayName": "Trillions"
+                            }
+                        ]
+                    }
+                },
+                "actualDecimalPlaces": {
+                    "displayName": "Value decimal Places",
+                    "type": {
+                        "text": true
+                    }
+                }
+            }
+        },
+        "target1": {
+            "displayName": "Comparison 1",
+            "properties": {
+                "target1Show": {
+                    "displayName": "Show Comparison",
+                    "type": {
+                        "enumeration": [
+                            {
+                                "value": "show",
+                                "displayName": "Show"
+                            },
+                            {
+                                "value": "hide",
+                                "displayName": "Hide"
+                            }
+                        ]
+                    }
+                },
+                "target1Arrow": {
+                    "displayName": "Show Arrow",
+                    "type": {
+                        "enumeration": [
+                            {
+                                "value": "show",
+                                "displayName": "Show"
+                            },
+                            {
+                                "value": "hide",
+                                "displayName": "Hide"
+                            }
+                        ]
+                    }
+                },
+                "target1Color": {
+                    "displayName": "Color",
+                    "type": {
+                        "fill": {
+                            "solid": {
+                                "color": true
+                            }
+                        }
+                    }
+                },
+                "fontSize": {
+                    "displayName": "Font size",
+                    "type": {
+                        "formatting": {
+                            "fontSize": true
+                        }
+                    }
+                },
+                "target1Prefix": {
+                    "displayName": "Prefix",
+                    "type": {
+                        "text": true
+                    }
+                },
+                "target1DisplayUnits": {
+                    "displayName": "Display Units",
+                    "type": {
+                        "enumeration": [
+                            {
+                                "value": "none",
+                                "displayName": "None"
+                            },
+                            {
+                                "value": "thousands",
+                                "displayName": "Thousands"
+                            },
+                            {
+                                "value": "millions",
+                                "displayName": "Millions"
+                            },
+                            {
+                                "value": "billions",
+                                "displayName": "Billions"
+                            },
+                            {
+                                "value": "trillions",
+                                "displayName": "Trillions"
+                            }
+                        ]
+                    }
+                },
+                "target1DecimalPlaces": {
+                    "displayName": "Value Decimal Places",
+                    "type": {
+                        "text": true
+                    }
+                },
+                "target1PosColor": {
+                    "displayName": "Color For Positive",
+                    "type": {
+                        "fill": {
+                            "solid": {
+                                "color": true
+                            }
+                        }
+                    }
+                },
+                "target1NegColor": {
+                    "displayName": "Color For Negative",
+                    "type": {
+                        "fill": {
+                            "solid": {
+                                "color": true
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "target2": {
+            "displayName": "Comparison 2",
+            "properties": {
+                "target2Show": {
+                    "displayName": "Show Comparison",
+                    "type": {
+                        "enumeration": [
+                            {
+                                "value": "show",
+                                "displayName": "Show"
+                            },
+                            {
+                                "value": "hide",
+                                "displayName": "Hide"
+                            }
+                        ]
+                    }
+                },
+                "target2Arrow": {
+                    "displayName": "Show Arrow",
+                    "type": {
+                        "enumeration": [
+                            {
+                                "value": "show",
+                                "displayName": "Show"
+                            },
+                            {
+                                "value": "hide",
+                                "displayName": "Hide"
+                            }
+                        ]
+                    }
+                },
+                "target2Color": {
+                    "displayName": "Color",
+                    "type": {
+                        "fill": {
+                            "solid": {
+                                "color": true
+                            }
+                        }
+                    }
+                },
+                "fontSize": {
+                    "displayName": "Font size",
+                    "type": {
+                        "formatting": {
+                            "fontSize": true
+                        }
+                    }
+                },
+                "target2Prefix": {
+                    "displayName": "Prefix",
+                    "type": {
+                        "text": true
+                    }
+                },
+                "target2DisplayUnits": {
+                    "displayName": "Display Units",
+                    "type": {
+                        "enumeration": [
+                            {
+                                "value": "none",
+                                "displayName": "None"
+                            },
+                            {
+                                "value": "thousands",
+                                "displayName": "Thousands"
+                            },
+                            {
+                                "value": "millions",
+                                "displayName": "Millions"
+                            },
+                            {
+                                "value": "billions",
+                                "displayName": "Billions"
+                            },
+                            {
+                                "value": "trillions",
+                                "displayName": "Trillions"
+                            }
+                        ]
+                    }
+                },
+                "target2DecimalPlaces": {
+                    "displayName": "Value Decimal Places",
+                    "type": {
+                        "text": true
+                    }
+                },
+                "target2PosColor": {
+                    "displayName": "Color For Positive",
+                    "type": {
+                        "fill": {
+                            "solid": {
+                                "color": true
+                            }
+                        }
+                    }
+                },
+                "target2NegColor": {
+                    "displayName": "Color For Negative",
+                    "type": {
+                        "fill": {
+                            "solid": {
+                                "color": true
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "kpiColors": {
+            "displayName": "Frame Color",
+            "properties": {
+                "badColor": {
+                    "displayName": "Color 1",
+                    "type": {
+                        "fill": {
+                            "solid": {
+                                "color": true
+                            }
+                        }
+                    }
+                },
+                "neutralColor": {
+                    "displayName": "Color 2",
+                    "type": {
+                        "fill": {
+                            "solid": {
+                                "color": true
+                            }
+                        }
+                    }
+                },
+                "goodColor": {
+                    "displayName": "Color 3",
+                    "type": {
+                        "fill": {
+                            "solid": {
+                                "color": true
+                            }
+                        }
+                    }
+                },
+                "neutralRangeStart": {
+                    "displayName": "Color 2 Start",
+                    "type": {
+                        "text": true
+                    }
+                },
+                "neutralRangeEnd": {
+                    "displayName": "Color 2 End",
+                    "type": {
+                        "text": true
+                    }
+                },
+                "colorUsing": {
+                    "displayName": "Color Based on Field",
+                    "type": {
+                        "enumeration": [
+                            {
+                                "value": "indicator",
+                                "displayName": "Indicator"
+                            },
+                            {
+                                "value": "target1",
+                                "displayName": "Comparison 1"
+                            },
+                            {
+                                "value": "target2",
+                                "displayName": "Comparison 2"
+                            }
+                        ]
+                    }
+                },
+                "borderSize": {
+                    "displayName": "Border Size",
+                    "type": {
+                        "text": true
+                    }
+                }
+            }
+        },
+        "others": {
+            "displayName": "KPI Font Type",
+            "properties": {
+                "font": {
+                    "displayName": "Font",
+                    "type": {
+                        "enumeration": [
+                            {
+                                "value": "Arial",
+                                "displayName": "Arial"
+                            },
+                            {
+                                "value": "Calibri",
+                                "displayName": "Calibri"
+                            },
+                            {
+                                "value": "Segoe UI",
+                                "displayName": "Segoe UI"
+                            },
+                            {
+                                "value": "DIN",
+                                "displayName": "DIN"
+                            }
+                        ]
+                    }
+                }
+            }
+        }
+    },
+    "dataViewMappings": [
+        {
+            "conditions": [
+                {
+                    "actual": {
+                        "max": 1
+                    },
+                    "target1": {
+                        "max": 1
+                    },
+                    "target2": {
+                        "max": 1
+                    }
+                }
+            ],
+            "categorical": {
+                "values": {
+                    "select": [
+                        {
+                            "bind": {
+                                "to": "actual"
+                            }
+                        },
+                        {
+                            "bind": {
+                                "to": "target1"
+                            }
+                        },
+                        {
+                            "bind": {
+                                "to": "target2"
+                            }
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}
