@@ -305,7 +305,7 @@ export class Visual implements IVisual {
 
         
         function sanitizeString(str) {
-            str = str.replace(/[^a-z0-9áéíóúñü \.!@&#^*()+=$%~`,/_-∠°Δπ∞γφ^∨:;"']/gim, "");
+            str = str.replace(/[^a-z0-9áéíóúñü \.!@&#^*()+=$%~`,/_-∠°Δπ∞γφ^∨:;?"']/gim, "");
            return str;
         }
         
