@@ -18,7 +18,10 @@
     "assets": {
         "icon": "assets/icon.png"
     },
-    "externalJS": [],
+    "externalJS": [
+        "node_modules/powerbi-visuals-utils-formattingutils/lib/globalize/lib/globalize.js",
+        "node_modules/powerbi-visuals-utils-formattingutils/lib/globalize/lib/globalize.cultures.js"
+    ],
     "style": "style/visual.less",
     "capabilities": "capabilities.json",
     "dependencies": null,

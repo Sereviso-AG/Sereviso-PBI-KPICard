@@ -260,21 +260,28 @@ export class Visual implements IVisual {
         if (options.dataViews[0].categorical.values[0]) { options.dataViews[0].categorical.values[0].values[0] == null ? this.actual = 0 : this.actual = +options.dataViews[0].categorical.values[0].values[0].toString(); }
         if (options.dataViews[0].categorical.values[1]) { options.dataViews[0].categorical.values[1].values[0] == null ? this.target1 = 0 : this.target1 = +options.dataViews[0].categorical.values[1].values[0].toString(); }
         if (options.dataViews[0].categorical.values[2]) { options.dataViews[0].categorical.values[2].values[0] == null ? this.target2 = 0 : this.target2 = +options.dataViews[0].categorical.values[2].values[0].toString(); }
-        
-      
+
+
 
         if (this.kpiName) { this.kpiName == 'KPI Name' ? this.kpiName = "KPI Name" : this.kpiName = options.dataViews[0].metadata.objects["kpiName"]['name'].toString(); }
         if (this.target1Prefix) { this.target1Prefix == null ? this.target1Prefix = "" : this.target1Prefix = options.dataViews[0].metadata.objects["target1"]["target1Prefix"].toString(); }
         if (this.target2Prefix) { this.target2Prefix == null ? this.target2Prefix = "" : this.target2Prefix = options.dataViews[0].metadata.objects["target2"]["target2Prefix"].toString(); }
         //Apply the number formatting to the numbers
-        
-        
+
+
         if (options.dataViews[0].categorical
             .values[0] && options.dataViews[0].categorical.values[0].source.format) {
-            var actualFormatter = valueFormatter.create({ format: options.dataViews[0].categorical.values[0].source.format, value: this.actualFormatValue, precision: this.actualDecimalPlaces });
+            /*var actualFormatter = valueFormatter.create({
+                format: options.dataViews[0].categorical.values[0].source.format,
+                value: this.actualFormatValue,
+                precision: this.actualDecimalPlaces
+            });*/
+            var actualFormatter = valueFormatter.create({
+                cultureSelector: this.locale,
+                format: "#,0.00",
+            });
             this.actualDisplay = actualFormatter.format(this.actual);
-        }
-        else {
+        } else {
             this.actualDisplay = (this.actual / this.unitDividerValue).toFixed(this.actualDecimalPlaces).toString() + this.unitsAbbr;
         }
 
@@ -303,16 +310,16 @@ export class Visual implements IVisual {
 
     public generateVisual() {
 
-        
+
         function sanitizeString(str) {
             str = str.replace(/[^a-z0-9áéíóúñü \.!@&#^*()+=$%~`,/_-∠°Δπ∞γφ^∨:;?"']/gim, "");
            return str;
         }
-        
+
         this.kpiName = sanitizeString(this.kpiName)
         this.target1Prefix = sanitizeString(this.target1Prefix)
-        this.target2Prefix = sanitizeString(this.target2Prefix)  
-        
+        this.target2Prefix = sanitizeString(this.target2Prefix)
+
         if (this.target1Show == "show" && this.target2Show == "show") {
             this.targetHTML.insertAdjacentHTML("afterbegin", "<link rel='stylesheet' type='text/css' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>" +
                 "<table id=kpitable> <tr id=kpiname> <td colspan=2>" + this.kpiName + "</td> </tr> <tr id=calloutvalue> <td colspan=2>" + this.actualDisplay + "</td> </tr>" +
@@ -524,7 +531,7 @@ export class Visual implements IVisual {
     }
 
     public destroy(): void {
-        
+
     }
 
 }
